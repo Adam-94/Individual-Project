@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<body>
+	<header>
+		<title>Visual Mot</title>
+	</header>
+	<main>
+		<div class="row">
+		<div class="wrapper">
+			<form action="#" id='myform' enctype="multipart/form-data">
+					<input type="file" id='capture' name="image" accept="image/*" capture="user">
+					<label for="capture" id='btn-label' class="btn-2">Take a Picture</label>
+					<canvas id="mycanvas"></canvas>
+					<div id="car">
+						<p id="numplate">{{ plate }} </p>
+					</div>
+					<div id="taxmot-box">
+					<div class="grid">
+						<div><p id="carmake">{{ car }} </p></div>
+						<div><p id="yearman">{{ year }} </p></div>
+						<div><p id="tax">{{ tax }} </p></div>
+						<div><p id="mot">{{ mot }} </p></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			</form>
+			<br/>
+		</div>
+	</main>
+
+	<script defer src="static/main.js"></script>
+
+</body>
+</html>
